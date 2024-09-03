@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Cantry</th>
+            <th>Capacity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stadium of stadiumsTab">
+            <td>{{stadium.id}}</td>
+            <td>{{stadium.name}}</td>
+            <td>{{stadium.country}}</td>
+            <td>{{stadium.capacity}}</td>
+            
+           
+            <td>
+                <button class="btn btn-success" >Display</button>
+                <button class="btn btn-info ml-1 mr-1" >Edit</button>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

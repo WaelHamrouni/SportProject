@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>NBR</th>
+            <th>Age</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of playersTab">
+            
+            <td>{{p.name}}</td>
+            <td>{{p.position}}</td>
+            <td>{{p.number}}</td>
+            <td>{{p.age}}</td>
+            <td>
+                <button class="btn btn-success" (click)="goToInfo( p._id)" >Display</button>
+                <button class="btn btn-info ml-1 mr-1" (click)="goToEdit( p._id)" >Edit</button>
+                <button class="btn btn-danger" (click)="deletPlayer(p._id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
